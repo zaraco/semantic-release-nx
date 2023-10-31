@@ -70,6 +70,7 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
+        "baseBranch": "main",
         "preset": "conventional",
         "tagPrefix": "APP1_"
       }
