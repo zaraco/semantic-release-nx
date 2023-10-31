@@ -18,12 +18,12 @@ jobs:
           node-version: '16'
       - name: Setup Git
         run: |
-          git config user.name "GitHub Bot"
-          git config user.email "gituser@example.com"
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       - run: npm ci
       - name: Version
         shell: bash
-        run: npm nx affected --base=last-release --target=version
+        run: npx nx affected --base=last-release --target=version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Tag last-release
