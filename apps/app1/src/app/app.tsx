@@ -10,6 +10,7 @@ export function App() {
       <div>
         <button>Submit</button>
         <button>Reset</button>
+        <button>Skip</button>
       </div>
     </div>
   );
